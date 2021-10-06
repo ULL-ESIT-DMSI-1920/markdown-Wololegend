@@ -61,7 +61,7 @@ Para que una línea se muestre como una cabecera se precede de tantas almohadill
 
 * Y así sucesivamente hasta el **índice 6**, que es el máximo.
 
-## Enlaces e imágenes
+## Enlaces
 
 Los **enlaces** son la base del lenguaje de marcado, puesto que un sitio web no es más que una serie de **información enlazada** en distintas páginas.
 
@@ -90,6 +90,81 @@ Existen dos tipos de enlaces: **en línea** y **por referencia**.
  [Imágenes de gatitos lindos 2](gatitos_img).
 
  [gatitos_img]: https://bit.ly/3A7LUSq
+
+ ## Imágenes
+
+ La sintaxis para insertar **imágenes** es muy similar a la de los enlaces. La diferencia es que, a lo que antes llamábamos _elemento enlazado_, lo llamamos _texto alternativo_ y lo precedemos por un cierre de exclamación ("!").
+
+ Este texto alternativo es un elemento de **accesibilidad**, y es realmente importante para personas con **conexiones a internet lentas o con discapacidades visuales**. Es por esto que consistirá en una breve descripción de la imagen que enlacemos.
+
+ Al igual que con los enlaces, podemos insertar imágenes **en línea** o **por referencia**:
+
+ * **Imágenes en línea**
+
+ `![Gatito con corona de flores en la cabeza](./img/gatito_corona.jpg)`  
+ ![Gatito con corona de flores en la cabeza](./img/gatito_corona.jpg)
+
+ * **Imágenes por referencia**
+
+ ```
+ ![Gatito con corona de flores en la cabeza 1][gatito_corona] ![Gatito con corona de flores en la cabeza 2][gatito_corona]
+
+ [gatito_corona]: ./img/gatito_corona.jpg
+ ```
+
+ ![Gatito con corona de flores en la cabeza 1][gatito_corona] ![Gatito con corona de flores en la cabeza 2][gatito_corona]
+
+ [gatito_corona]: ./img/gatito_corona.jpg
+
+## Listas
+
+Organizar elementos en una lista también es algo básico de los lenguajes de marcado. Existen dos tipos de listas: ordenadas y no ordenadas.
+
+* **Listas no ordenadas**
+
+Cada elemento se indica con un **asterisco**. Los elementos de indentan utilizando **espacios**, y para separar un elemento de la lista y un párrafo dentro de esta situamos **dos espacios** al final del elemento (aquí indicado con ";" para que se vea).
+
+```
+ * Elemento 1.
+
+ * Elemento 2.
+   * Elemento 2.1.;;
+   Esta es la descripción del elemento 2.1.
+
+ * Elemento 3.
+```
+
+ Equivale a lo siguiente:
+
+ * Elemento 1.
+
+ * Elemento 2.
+   * Elemento 2.1.  
+   Esta es la descripción del elemento 2.1.
+
+ * Elemento 3.  
+
+* **Listas ordenadas**
+
+ Funcionan **exactamente igual** que las no ordenadas, pero en lugar de anteceder los elementos con un asterisco, lo hacemos con **números**.
+
+ ```
+ 1. Elemento 1.
+
+ 2. Elemento 2.
+
+ 7. Elemento 3.
+ ```
+
+ Equivale a lo siguiente:
+
+ 1. Elemento 1.
+
+ 2. Elemento 2.
+
+ 7. Elemento 3.
+
+Es importante notar que **no podemos utilizar la numeración que queramos**. Por mucho que hayamos utilizado un 7 para el índice del tercer elemento, la lista va de 1 hasta 3 **de forma ordenada**.
 
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5793149&assignment_repo_type=AssignmentRepo)
 
